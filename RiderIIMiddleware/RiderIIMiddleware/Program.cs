@@ -15,12 +15,15 @@ namespace RiderIIMiddleware
 
             int playerId = Convert.ToInt32(Console.ReadLine());
 
-            Thread mainThread = new Thread(new ThreadStart(MainThread));
-            mainThread.Start();
+           
 
             Client newClient = new Client();
             newClient.sendToUserId = playerId;
             newClient.StartConnetcion();
+
+            Thread mainThread = new Thread(new ThreadStart(MainThread));
+            mainThread.Start();
+
             Console.ReadKey();
         }
 

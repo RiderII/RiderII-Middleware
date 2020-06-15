@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 /// <summary>Sent from server to client.</summary>
 public enum ServerPackets
 {
     welcome = 1,
-    spawnPlayer,
-    playerPosition,
-    playerRotation,
-    playerDisconnected,
-    playerCollided,
-    obstacleSpawned,
-    playerFinishedGame,
-    restartPlayerPosition
 }
 
 /// <summary>Sent from client to server.</summary> 
@@ -21,7 +14,6 @@ public enum ClientPackets
 {
     welcomeReceived = 1,
     playerMovement,
-    restartScene
 }
 
 namespace RiderIIMiddleware 
@@ -170,22 +162,22 @@ namespace RiderIIMiddleware
 
         /// <summary>Adds a Vector3 to the packet.</summary>
         /// <param name="_value">The Vector3 to add.</param>
-        //public void Write(Vector3 _value)
-        //{
-        //    Write(_value.x);
-        //    Write(_value.y);
-        //    Write(_value.z);
-        //}
+        public void Write(Vector3 _value)
+        {
+            Write(_value.X);
+            Write(_value.Y);
+            Write(_value.Z);
+        }
 
         /// <summary>Adds a Quaternion to the packet.</summary>
         /// <param name="_value">The Quaternion to add.</param>
-        //public void Write(Quaternion _value)
-        //{
-        //    Write(_value.x);
-        //    Write(_value.y);
-        //    Write(_value.z);
-        //    Write(_value.w);
-        //}
+        public void Write(Quaternion _value)
+        {
+            Write(_value.X);
+            Write(_value.Y);
+            Write(_value.Z);
+            Write(_value.W);
+        }
 
         #endregion
 
@@ -361,17 +353,17 @@ namespace RiderIIMiddleware
 
         /// <summary>Reads a Vector3 from the packet.</summary>
         /// <param name="_moveReadPos">Whether or not to move the buffer's read position.</param>
-        //public Vector3 ReadVector3(bool _moveReadPos = true)
-        //{
-        //    return new Vector3(ReadFloat(_moveReadPos), ReadFloat(_moveReadPos), ReadFloat(_moveReadPos));
-        //}
+        public Vector3 ReadVector3(bool _moveReadPos = true)
+        {
+            return new Vector3(ReadFloat(_moveReadPos), ReadFloat(_moveReadPos), ReadFloat(_moveReadPos));
+        }
 
-        ///// <summary>Reads a Quaternion from the packet.</summary>
-        ///// <param name="_moveReadPos">Whether or not to move the buffer's read position.</param>
-        //public Quaternion readQuaternion(bool _moveReadPos = true)
-        //{
-        //    return new Quaternion(ReadFloat(_moveReadPos), ReadFloat(_moveReadPos), ReadFloat(_moveReadPos), ReadFloat(_moveReadPos));
-        //}
+        /// <summary>Reads a Quaternion from the packet.</summary>
+        /// <param name="_moveReadPos">Whether or not to move the buffer's read position.</param>
+        public Quaternion readQuaternion(bool _moveReadPos = true)
+        {
+            return new Quaternion(ReadFloat(_moveReadPos), ReadFloat(_moveReadPos), ReadFloat(_moveReadPos), ReadFloat(_moveReadPos));
+        }
 
         #endregion
 

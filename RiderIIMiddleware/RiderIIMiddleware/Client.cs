@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -9,11 +10,12 @@ namespace RiderIIMiddleware
     {
         public static Client instance;
         public static int dataBufferSize = 4096;
-        public string ip = "127.0.0.1";
+        public string ip = "3.128.24.55";
         public int port = 26950;
         public int middlewareId = 0;
         public int sendToUserId = 0;
         public TCP tcp;
+        public UDP udp;
 
         private bool isConnected = false;
         private delegate void PacketHandler(Packet _packet);
@@ -28,6 +30,7 @@ namespace RiderIIMiddleware
         {
             InitializeClientData();
             tcp = new TCP();
+            udp = new UDP();
             isConnected = true;
             tcp.Connect();
         }
@@ -136,7 +139,7 @@ namespace RiderIIMiddleware
                         using (Packet _packet = new Packet(_packetBytes))
                         {
                             int _packetId = _packet.ReadInt();
-                            packetHandlers[_packetId](_packet);
+                            if (_packetId == 1) packetHandlers[_packetId](_packet);
                         }
                     });
 
@@ -170,19 +173,60 @@ namespace RiderIIMiddleware
             }
         }
 
+        public class UDP
+        {
+            public UdpClient socket;
+            public IPEndPoint endPoint;
+
+            public UDP()
+            {
+                endPoint = new IPEndPoint(IPAddress.Parse(instance.ip), instance.port);
+            }
+
+            public void Connect(int _localPort) //the users port number not the server
+            {
+                socket = new UdpClient(_localPort);
+
+                socket.Connect(endPoint);
+
+                // Initiates the connection with the server and opens up the local port so that the client can receive messages.
+                using (Packet _packet = new Packet())
+                {
+                    SendData(_packet);
+                }
+            }
+
+            public void SendData(Packet _packet)
+            {
+                try
+                {
+                    _packet.InsertInt(instance.middlewareId);
+                    if (socket != null)
+                    {
+                        socket.BeginSend(_packet.ToArray(), _packet.Length(), null, null);
+                    }
+                }
+                catch (Exception _ex)
+                {
+                    Console.WriteLine($"Error sending data to the server via UDP: {_ex}");
+                }
+            }
+
+            private void Disconnect()
+            {
+                instance.Disconnect();
+
+                endPoint = null;
+                socket = null;
+            }
+        }
+
+
         private void InitializeClientData()
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
         {
             { (int)ServerPackets.welcome, PacketHandle.Welcome },
-            //{ (int)ServerPackets.spawnPlayer, PacketHandle.SpawnPlayer },
-            //{ (int)ServerPackets.playerPosition, PacketHandle.PlayerPosition },
-            //{ (int)ServerPackets.playerRotation, PacketHandle.PlayerRotation },
-            //{ (int)ServerPackets.playerDisconnected, PacketHandle.PlayerDisconnected },
-            //{ (int)ServerPackets.playerCollided, PacketHandle.PlayerCollided },
-            //{ (int)ServerPackets.obstacleSpawned, PacketHandle.ObstacleSpawned },
-            //{ (int)ServerPackets.playerFinishedGame, PacketHandle.PlayerFinishedGame },
-            //{ (int)ServerPackets.restartPlayerPosition, PacketHandle.RestartPlayerPosition }
         };
             Console.WriteLine("Initialized packets!");
         }
@@ -197,10 +241,10 @@ namespace RiderIIMiddleware
                 {
                     tcp.socket.Close();
                 }
-                //if (udp != null)
-                //{
-                //    udp.socket.Close();
-                //}
+                if (udp != null)
+                {
+                    udp.socket.Close();
+                }
 
                 Console.WriteLine("Disconnected from server.");
             }

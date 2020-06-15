@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace RiderIIMiddleware
@@ -18,7 +19,7 @@ namespace RiderIIMiddleware
 
             Console.WriteLine($"Message from server: {_msg}. RiderII middleware connected with id: {Client.instance.middlewareId}");
 
-            //Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+            Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
         }
     }
 }
