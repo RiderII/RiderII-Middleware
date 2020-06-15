@@ -1,0 +1,11 @@
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.deps.json
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.runtimeconfig.json
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.runtimeconfig.dev.json
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.dll
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.pdb
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.csprojAssemblyReference.cache
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.AssemblyInfoInputs.cache
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.AssemblyInfo.cs
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.dll
+C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.pdb
