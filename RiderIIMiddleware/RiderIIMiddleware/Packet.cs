@@ -6,13 +6,13 @@ using System.Text;
 /// <summary>Sent from server to client.</summary>
 public enum ServerPackets
 {
-    welcome = 1,
+    enterLobby = 1,
 }
 
 /// <summary>Sent from client to server.</summary> 
 public enum ClientPackets
 {
-    welcomeReceived = 1,
+    RequestEnterLobby = 1,
     playerMovement,
 }
 

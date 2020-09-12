@@ -10,7 +10,7 @@ namespace RiderIIMiddleware
     {
         public static Client instance;
         public static int dataBufferSize = 4096;
-        public string ip = "3.128.24.55";
+        public string ip = "10.147.17.18";
         public int port = 26950;
         public int middlewareId = 0;
         public int sendToUserId = 0;
@@ -226,7 +226,7 @@ namespace RiderIIMiddleware
         {
             packetHandlers = new Dictionary<int, PacketHandler>()
         {
-            { (int)ServerPackets.welcome, PacketHandle.Welcome },
+            { (int)ServerPackets.enterLobby, PacketHandle.Welcome },
         };
             Console.WriteLine("Initialized packets!");
         }

@@ -21,7 +21,7 @@ namespace RiderIIMiddleware
         #region Packets
         public static void WelcomeReceived()
         {
-            using (Packet _packet = new Packet((int)ClientPackets.welcomeReceived))
+            using (Packet _packet = new Packet((int)ClientPackets.RequestEnterLobby))
             {
                 _packet.Write(Client.instance.sendToUserId); //the server can confirm that the client claimed the correct Id.
                 _packet.Write("Middleware");
