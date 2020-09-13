@@ -12,7 +12,9 @@ public enum ServerPackets
 /// <summary>Sent from client to server.</summary> 
 public enum ClientPackets
 {
-    RequestEnterLobby = 1,
+    requestEnteredLobby = 1,
+    sendReadyState,
+    sendToGame,
     playerMovement,
 }
 

@@ -15,12 +15,12 @@ namespace RiderIIMiddleware
         private static void SendInputToServer()
         {
             bool[] _inputs = new bool[]
-        {
-            Console.ReadKey().Key == ConsoleKey.UpArrow,
-            false,
-            false,
-            false
-        };
+            {
+                Console.ReadKey().Key == ConsoleKey.UpArrow,
+                false,
+                false,
+                false
+            };
 
             PacketSend.PlayerMovement(_inputs);
         }
