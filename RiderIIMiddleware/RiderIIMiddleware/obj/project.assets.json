@@ -745,23 +745,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\domin\\.nuget\\packages\\": {},
+    "C:\\Users\\migue\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\domin\\Desktop\\UPC IX\\TP1\\Rider II\\RiderII-Middleware\\RiderIIMiddleware\\RiderIIMiddleware\\RiderIIMiddleware.csproj",
+      "projectUniqueName": "C:\\UPC\\10mo\\tp2\\develop\\RiderII-Middleware\\RiderIIMiddleware\\RiderIIMiddleware\\RiderIIMiddleware.csproj",
       "projectName": "RiderIIMiddleware",
-      "projectPath": "C:\\Users\\domin\\Desktop\\UPC IX\\TP1\\Rider II\\RiderII-Middleware\\RiderIIMiddleware\\RiderIIMiddleware\\RiderIIMiddleware.csproj",
-      "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\domin\\Desktop\\UPC IX\\TP1\\Rider II\\RiderII-Middleware\\RiderIIMiddleware\\RiderIIMiddleware\\obj\\",
+      "projectPath": "C:\\UPC\\10mo\\tp2\\develop\\RiderII-Middleware\\RiderIIMiddleware\\RiderIIMiddleware\\RiderIIMiddleware.csproj",
+      "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
+      "outputPath": "C:\\UPC\\10mo\\tp2\\develop\\RiderII-Middleware\\RiderIIMiddleware\\RiderIIMiddleware\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
