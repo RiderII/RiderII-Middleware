@@ -9,3 +9,14 @@ C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\
 C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.AssemblyInfo.cs
 C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.dll
 C:\Users\domin\Desktop\UPC IX\TP1\Rider II\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.pdb
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.deps.json
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.runtimeconfig.json
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.runtimeconfig.dev.json
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.dll
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\bin\Debug\netcoreapp2.1\RiderIIMiddleware.pdb
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.csprojAssemblyReference.cache
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.csproj.CoreCompileInputs.cache
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.AssemblyInfoInputs.cache
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.AssemblyInfo.cs
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.dll
+C:\UPC\10mo\tp2\develop\RiderII-Middleware\RiderIIMiddleware\RiderIIMiddleware\obj\Debug\netcoreapp2.1\RiderIIMiddleware.pdb
