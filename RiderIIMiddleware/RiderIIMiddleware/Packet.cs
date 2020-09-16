@@ -7,6 +7,24 @@ using System.Text;
 public enum ServerPackets
 {
     enterLobby = 1,
+    sendToLobby,
+    sendReadyState,
+    spawnPlayer,
+    playerPosition,
+    playerRotation,
+    playerDisconnected,
+    playerCollided,
+    obstacleSpawned,
+    playerFinishedGame,
+    restartPlayerPosition,
+    playerCollidedWithOtherPlayer,
+    elementCollision,
+    speedUp,
+    sendPlayerStatisticsToAll,
+    updatePlayerSteps,
+    updatePlayerPoints,
+    assignMiddlewareToUser,
+    startMiddleware
 }
 
 /// <summary>Sent from client to server.</summary> 
@@ -16,6 +34,9 @@ public enum ClientPackets
     sendReadyState,
     sendToGame,
     playerMovement,
+    restartScene,
+    sendPlayerStatistics,
+    startMiddleware
 }
 
 namespace RiderIIMiddleware 

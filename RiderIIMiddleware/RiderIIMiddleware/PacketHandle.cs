@@ -21,5 +21,10 @@ namespace RiderIIMiddleware
 
             Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
         }
+
+        public static void StartSendingPackets(Packet _packet)
+        {
+            int _id = _packet.ReadInt();
+        }
     }
 }

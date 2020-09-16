@@ -6,6 +6,7 @@ namespace RiderIIMiddleware
     class Program
     {
         private static bool isRunning;
+        public static Thread mainThread;
 
         static void Main(string[] args)
         {
@@ -15,13 +16,11 @@ namespace RiderIIMiddleware
 
             int playerId = Convert.ToInt32(Console.ReadLine());
 
-           
-
             Client newClient = new Client();
             newClient.sendToUserId = playerId;
             newClient.StartConnetcion();
 
-            Thread mainThread = new Thread(new ThreadStart(MainThread));
+            mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
 
             Console.ReadKey();

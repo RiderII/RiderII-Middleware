@@ -227,6 +227,7 @@ namespace RiderIIMiddleware
             packetHandlers = new Dictionary<int, PacketHandler>()
         {
             { (int)ServerPackets.enterLobby, PacketHandle.Welcome },
+            { (int)ServerPackets.startMiddleware, PacketHandle.StartSendingPackets },
         };
             Console.WriteLine("Initialized packets!");
         }
