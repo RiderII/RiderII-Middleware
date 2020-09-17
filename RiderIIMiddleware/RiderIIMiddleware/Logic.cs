@@ -26,6 +26,7 @@ namespace RiderIIMiddleware
             if(_inputs[0] == true)
             {
                 PacketSend.PlayerMovement(_inputs);
+                //Console.WriteLine("true enviado");
             }
         }
     }
