@@ -23,7 +23,10 @@ namespace RiderIIMiddleware
                 false
             };
 
-            PacketSend.PlayerMovement(_inputs);
+            if(_inputs[0] == true)
+            {
+                PacketSend.PlayerMovement(_inputs);
+            }
         }
     }
 }

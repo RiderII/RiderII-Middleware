@@ -26,7 +26,6 @@ namespace RiderIIMiddleware
             Thread mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
 
-            Console.ReadKey();
         }
 
         private static void MainThread()
