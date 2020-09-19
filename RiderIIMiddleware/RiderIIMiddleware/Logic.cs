@@ -9,6 +9,7 @@ namespace RiderIIMiddleware
         public static void Udpate(Arduino arduino)
         {
 
+            //arduino.Update();
             SendInputToServer(arduino);
             ThreadManager.UpdateMain();
         }

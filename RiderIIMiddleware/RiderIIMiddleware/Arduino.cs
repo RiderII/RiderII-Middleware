@@ -24,24 +24,30 @@ namespace RiderIIMiddleware
             {
                 try
                 {
-                    //Console.WriteLine(sp);
-                    int direction = sp.ReadByte();
-                    Console.WriteLine(direction);
-                    //if (direction.Length<3)
-                    //{
-                    //    return false;
-                    //}
-                    
-                    //int data = Convert.ToInt32(direction);
-
-                    if (direction == 0)
+                    //sp.Write("a");
+                    if(sp.BytesToRead != 0)
                     {
-                        return false;
+                        int direction = sp.ReadByte();
+
+                        Console.WriteLine(direction);
+
+                        if (direction == 0)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
                     }
                     else
                     {
-                        return true;
+                        return false;
                     }
+                    
+                   
+
+                    
 
                 }
                 catch (System.Exception e)
