@@ -6,19 +6,20 @@ namespace RiderIIMiddleware
 {
     class Logic
     {
-        public static void Udpate(Arduino arduino)
+        public static void Udpate()
         {
 
             //arduino.Update();
-            SendInputToServer(arduino);
+            SendInputToServer();
             ThreadManager.UpdateMain();
         }
 
-        private static void SendInputToServer(Arduino arduino)
+        private static void SendInputToServer()
         {
             bool[] _inputs = new bool[]
             {
-                arduino.Update(),
+                //arduino.Update(),
+                Console.ReadKey().Key == ConsoleKey.UpArrow,
                 false,
                 false,
                 false

@@ -203,6 +203,7 @@ namespace RiderIIMiddleware
                     _packet.InsertInt(instance.middlewareId);
                     if (socket != null)
                     {
+                        Console.WriteLine(DateTime.Now.ToString("hh.mm.ss.ffff"));
                         socket.BeginSend(_packet.ToArray(), _packet.Length(), null, null);
                     }
                 }

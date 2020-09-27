@@ -31,7 +31,7 @@ namespace RiderIIMiddleware
         private static void MainThread()
         {
             //Arduino
-            Arduino arduino = new Arduino();
+            //Arduino arduino = new Arduino();
             Console.WriteLine($"Main thread started. Running at {Constants.TICKS_PER_SEC} ticks per second.");
             DateTime _nextLoop = DateTime.Now;
 
@@ -39,7 +39,7 @@ namespace RiderIIMiddleware
             {
                 while (_nextLoop < DateTime.Now)
                 {
-                    Logic.Udpate(arduino);
+                    Logic.Udpate();//pasa arduino
 
                     _nextLoop = _nextLoop.AddMilliseconds(Constants.MS_PER_TICK);
                 }
