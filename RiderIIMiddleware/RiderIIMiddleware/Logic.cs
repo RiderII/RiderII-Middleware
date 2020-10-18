@@ -15,19 +15,33 @@ namespace RiderIIMiddleware
 
         private static void SendInputToServer(Arduino arduino)
         {
-            bool[] _inputs = new bool[]
-            {
-                arduino.Update(),
-                false,
-                false,
-                false
-            };
+            //bool[] _inputs = new bool[]
+            //{
+            //    arduino.Update(),
+            //    false,
+            //    false,
+            //    false
+            //};
 
-            if(_inputs[0] == true)
+            float input = arduino.Update();
+            
+            
+            if (input > 0)
             {
-                PacketSend.PlayerMovement(_inputs);
-                //Console.WriteLine("true enviado");
+                float speed = (input * Client.instance.wheelLong) / 60;
+                //speed *= 0.6f;
+                Console.WriteLine(speed);
+                if(speed < 0.25)
+                {
+                    PacketSend.PlayerMovement(0.0f);
+                }
+                else
+                {
+                    PacketSend.PlayerMovement(speed);
+                }
+                
             }
+
         }
     }
 }

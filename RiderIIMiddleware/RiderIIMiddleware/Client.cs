@@ -10,10 +10,12 @@ namespace RiderIIMiddleware
     {
         public static Client instance;
         public static int dataBufferSize = 4096;
-        public string ip = "127.0.0.1";
+        //public string ip = "127.0.0.1";
+        public string ip = "3.129.5.65";
         public int port = 26950;
         public int middlewareId = 0;
         public int sendToUserId = 0;
+        public float wheelLong = 0;
         public TCP tcp;
         public UDP udp;
 

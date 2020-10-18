@@ -11,6 +11,8 @@ namespace RiderIIMiddleware
         {
             Console.WriteLine("RiderII Middleware!");
             isRunning = true;
+            Console.WriteLine("Enter wheel diameter in meters: ");
+            float diameter = float.Parse(Console.ReadLine());
             Console.WriteLine("Enter player id: ");
 
             int playerId = Convert.ToInt32(Console.ReadLine());
@@ -19,6 +21,7 @@ namespace RiderIIMiddleware
 
             Client newClient = new Client();
             newClient.sendToUserId = playerId;
+            newClient.wheelLong = diameter * 3.14f;
             newClient.StartConnetcion();
 
             

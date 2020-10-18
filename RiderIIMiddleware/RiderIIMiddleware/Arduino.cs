@@ -15,30 +15,35 @@ namespace RiderIIMiddleware
             sp.ReadTimeout = 1;
             instance = this;
         }
-        public bool Update()
+        public float Update()
         {
             if (sp.IsOpen)
             {
                 try
                 {
-                    int direction = sp.ReadByte();
-                    Console.WriteLine(direction);
-                    if (direction == 0)
+                    if (sp.BytesToRead != 0)
                     {
-                        return false;
+
+                        //int direction = sp.ReadByte();
+                        string data = sp.ReadLine();
+                        float direction = float.Parse(data);
+                        //Console.WriteLine(direction);
+                       
+                        return direction;
+                        
                     }
                     else
                     {
-                        return true;
-                    }
+                        return 0;
+                    }                     
                 }
                 catch (System.Exception e)
                 {
                     //Console.WriteLine(e.Message);
-                    return false;
+                    return 0;
                 }
             }
-            return false;
+            return 0;
         }
     }
 
